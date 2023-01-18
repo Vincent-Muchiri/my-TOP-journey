@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        // This function increments any number by 7
+        function add7(num){
+            var sum = num + 7;
+            return sum;
+        }
+        
+        // This function multiplies two numbers
+        function multiply(num1, num2){
+            var answer = num1 * num2;
+            return answer;
+        }
+        
+        //This function capitalizes the first letter of a string
+        function capitalize(initialText){
+            // Get and make the text after the first character lower case
+            lastIndex = initialText.length - 1;
+            lowercaseChar = initialText.substring(1, lastIndex + 1).toLowerCase();
+            //Now make the first character uppercase
+            firstChar = initialText.charAt(0).toUpperCase();
+            //Concatenate the two
+            finalText = firstChar + lowercaseChar
+            return finalText
+        }
+
+
+        function lastLetter(initialText){
+            let lastIndex = initialText.length - 1;
+            var lastChar = initialText.charAt(lastIndex);
+            return lastChar;
+        }
+
+
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <h1>Fundamentals Part 3</h1>
+    <p>
+        This java script exercise covers functions.
+    </p>
+</body>
+</html>
