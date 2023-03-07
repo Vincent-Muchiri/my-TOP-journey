@@ -26,28 +26,27 @@ const pChild = document.createElement('p');
 // Add text
 pChild.textContent = "Hey I'm red!";
 // Make the text red
-pChild.style.color = 'blue';
+pChild.style.color = 'red';
 // Place the paragraph in the container
 divContainer.appendChild(pChild);
 
 // H3 with text
-h3Child = document.createAttribute();
+const h3Child = document.createElement('h3');
 h3Child.textContent = "I'm a blue h3!";
 h3Child.style.color = 'blue';
 divContainer.appendChild(h3Child);
 
 // Div
-divSibling = document.createElement('div');
-divSibling.setAttribute('style', 'border-style: solid; border-width: 2px; border-color: black; background: pink');
-divSibling.textContent = "What's happening";
+const divSibling = document.createElement('div');
+divSibling.setAttribute('style', 'border-style: solid; border-color: black; background: pink');
 
 
 //Add h1 and p in the div
-pGrandChild = document.createElement('p');
+const pGrandChild = document.createElement('p');
 pGrandChild.textContent = "ME TOO!";
 divSibling.appendChild(pGrandChild);
 
-h1GrandChild = document.createElement('h1');
+const h1GrandChild = document.createElement('h1');
 h1GrandChild.textContent = "I'm a div";
 divSibling.insertBefore(h1GrandChild, pGrandChild);
 
