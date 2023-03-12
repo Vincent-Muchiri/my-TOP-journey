@@ -28,6 +28,12 @@ button3.classList.add('button3', 'button');
 button3.textContent = "Button 3";
 divContainer.appendChild(button3);
 
+// Set background color to all buttons
+var buttons = document.getElementsByClassName('button');
+for(var i = 0; i < 3; i++){
+    buttons.item(i).setAttribute('style', 'background-color: red');
+}
+
 // Create a flex container
 flexContainer = document.getElementById('div-container');
 flexContainer.style.display = 'flex';
