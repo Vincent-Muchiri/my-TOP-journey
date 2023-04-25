@@ -5,7 +5,7 @@ let playerScore = 0;
 let tries = 0;
 
 function getComputerChoice(){
-    let computerSelection = gameChoices[Math.floor(Math.random() * 3)];
+    let computerSelection = gameChoices[Math.floor(Math.random() * gameChoices.length)];
     //console.log(computerSelection);
     return computerSelection.toLowerCase();
 }
@@ -17,16 +17,17 @@ function playRound(playerSelection, computerSelection){
         console.log("Choose either rock, paper, scissors");
         tries --;
     }else if (playerSelection == "rock" && computerSelection == "paper" || playerSelection == "paper" && computerSelection == "scissors" || playerSelection == "scissors" && computerSelection == "rock"){
-        console.log(`You lose! ${computerSelection} beats ${playerSelection}`);
+        console.log(`You've lost this round! ${computerSelection} beats ${playerSelection}`);
         computerScore ++;
     } else if(playerSelection == computerSelection){
-        console.log("You both choose the same option. Try again.");
+        console.log("It's a tie. Try again.");
         tries --;
     } else{
-        console.log(`You win! ${playerSelection} beats ${computerSelection}`);
+        console.log(`You've won this round! ${playerSelection} beats ${computerSelection}`);
         playerScore ++;
     }
-    scoreArray = [playerScore, computerScore]
+    scoreArray = [playerScore, computerScore];
+    console.log(scoreArray);
 
 }
 
@@ -47,7 +48,7 @@ let continuePlaying = true;
 
 while (continuePlaying){
     game()
-    if (tries == 5){
+    /*if (tries == 5){
         if (playerScore > computerScore){
             console.log("You've won!");
         }
@@ -59,12 +60,13 @@ while (continuePlaying){
         }
         console.log(scoreArray);
         continuePlaying = false;
+    }*/
+    if (playerScore == 3){
+        alert("Congratulations, you've won!");
+        continuePlaying = false;
+    }
+    else if(computerScore == 3){
+        alert("Sorry, you've lost.");
+        continuePlaying = false;
     }
 }
-
-
-
-
-
-
-
